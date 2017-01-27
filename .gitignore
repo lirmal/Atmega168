@@ -1,0 +1,9 @@
+*.aps
+*.aws
+*.o
+*.map
+*.lss
+*.elf
+*.eep
+makefile
+dep/
