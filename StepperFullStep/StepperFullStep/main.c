@@ -34,18 +34,39 @@ int main(void)
 			}
 			if (Step==2)
 			{
-				PORTD |= (1 << PD6);
-				PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD7));
+				PORTD |= (1 << PD4) | (1 << PD6);
+				PORTD &= ~((1 << PD5) | (1 << PD7));
 			}
 			if (Step==3)
 			{
-				PORTD |= (1 << PD5);
-				PORTD &= ~((1 << PD4) | (1 << PD6) | (1 << PD7));				
+				PORTD |= (1 << PD6);
+				PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD7));	
 			}
 			if (Step==4)
 			{
+				PORTD |= (1 << PD6) | (1 << PD5);
+				PORTD &= ~((1 << PD4) | (1 << PD7) );
+
+			}
+			if (Step==5)
+			{
+				PORTD |= (1 << PD5);
+				PORTD &= ~((1 << PD4) | (1 << PD6) | (1 << PD7));
+			}
+			if (Step==6)
+			{
+				PORTD |= (1 << PD5) | (1 << PD7);
+				PORTD &= ~((1 << PD4) | (1 << PD6) );
+			}
+			if (Step==7)
+			{
 				PORTD |= (1 << PD7);
 				PORTD &= ~((1 << PD4) | (1 << PD5) | (1 << PD6));
+			}
+			if (Step==8)
+			{
+				PORTD |= (1 << PD7) | (1 << PD4);
+				PORTD &= ~((1 << PD5) | (1 << PD6));
 				Step=0;
 			}
 			count=0;
