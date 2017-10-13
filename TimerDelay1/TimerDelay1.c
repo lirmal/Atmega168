@@ -4,12 +4,12 @@ int main (void)
 {
    DDRB |= (1 << PB2); // Set LED as output
 
-   TCCR1B |= (1 << CS11); // Set up timer
+   TCCR1B |= (1 << CS12) | (1 << CS10); // Set up timer
 
    for (;;)
    {
       // Check timer value in if statement, true when count matches 1/20 of a second
-      if (TCNT1 >= 57600)
+      if (TCNT1 >= 100)
       {
          PORTB ^= (1 <<  PB2); // Toggle the LED
 

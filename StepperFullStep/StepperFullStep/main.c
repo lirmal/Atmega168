@@ -21,11 +21,11 @@ int main(void)
 	   
 	   sei();
 	   //TCCR0B = 0;
-	   TCCR0B = (1 << CS02) | (1<< CS00);
+	   TCCR0B = (1 << CS01) ;
 
     while (1) 
     {
-		if (count == 30)
+		if (count == 180)
 		{
 			if (Step==1)
 			{
